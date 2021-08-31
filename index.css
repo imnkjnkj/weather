@@ -5,6 +5,7 @@ body {
   line-height: 1;
   margin: 0 auto;
   max-width: 1152px;
+  background: linear-gradient(to bottom, #1d2b64, #f8cdda);
 }
 a {
   text-decoration: none;
@@ -44,7 +45,6 @@ img {
   height: 982px;
 
   align-items: center;
-  background: linear-gradient(to bottom, #1d2b64, #f8cdda);
 }
 .main-ui {
   width: calc(100% / 2.5);
