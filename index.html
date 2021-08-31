@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible." content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Weather Today</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-ui">
+        <div class="content">
+        <input type="text"class="search" placeholder="Enter your city" autocomplete="off">
+        <h1 id="date"></h1>
+        <h4 id="city">Hồ Chí Minh</h4>
+        <img id="icon" src="" alt="" />
+        <p id="decription" class="desc"></p>
+
+        <p id="nhietDo" class="temp" ></p>
+      </div>
+      </div>
+
+      <div class="more-ui">
+        <div class="top">
+          <div class="row">
+            <img id="icon1" src="" alt="" />
+            <p id="nhietDo1" class="temp" ></p>
+            <p id="date1" class="date"></p>
+            
+      </div>
+      <div class="row">
+        <img id="icon2" src="" alt="" />
+        <p id="nhietDo2" class="temp" ></p>
+        <p id="date2" class="date"></p>
+        
+  </div>
+  <div class="row">
+    <img id="icon3" src="" alt="" />
+    <p id="nhietDo3" class="temp" ></p>
+    <p id="date3" class="date"></p>
+    
+</div>
+        </div>
+
+    <div class="bottom">
+      <div class="item">
+        <div class="row">
+          <div class="col">
+          <p>Humidity: &#160 </p>
+            <p id="doAm"></p>
+          </div>
+          <div class="col">
+            <p>Wind speed:&#160 </p>
+            <p id="wind"></p>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>Sunrise:&#160 </p>
+            <p id="sunrise"></p>
+          </div>
+          <div class="col">
+              <p>Sunset:&#160 </p>
+              <p id="sunset"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="date.js"></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
