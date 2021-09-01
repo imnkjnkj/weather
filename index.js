@@ -100,7 +100,6 @@ callApi();
 
 
 var slideIndex = 1;
-showSlides(slideIndex);
 
 // Next/previous controls
 function plusDivs(n) {
@@ -108,10 +107,15 @@ function plusDivs(n) {
 }
 
 // Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
+if ($(window).width() < 375) {
+    showSlides(slideIndex);
+
+
+ }
+ function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("slide");
