@@ -42,13 +42,14 @@ img {
   color: white;
   display: flex;
   flex-direction: row;
-  height: 982px;
-
+  height: 1429px;
   align-items: center;
 }
 .main-ui {
   width: calc(100% / 2.5);
   text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 .main-ui .search {
   background-color: transparent;
@@ -94,6 +95,7 @@ input[type="text"]:focus {
 .more-ui {
   color: #afafaf;
   margin: 0px ​40px;
+  text-align: center;
 }
 .item {
   display: flex;
@@ -101,6 +103,7 @@ input[type="text"]:focus {
   justify-content: space-around;
   text-align: left;
   margin-top: 48px;
+  margin-right: 50px;
 }
 .col {
   display: flex;
@@ -110,7 +113,7 @@ input[type="text"]:focus {
   border-radius: 10px;
   padding: 30px;
   margin: 30px;
-  font-size: 24px;
+  font-size: 20px;
   color: white;
 }
 .top {
@@ -118,7 +121,7 @@ input[type="text"]:focus {
   flex-direction: row;
 }
 .top .row {
-  margin: 0 50px;
+  margin-right: 50px;
   width: 100%;
 }
 .top .row .temp {
@@ -135,4 +138,68 @@ input[type="text"]:focus {
 .bottom {
   margin-top: 80px;
   border-top: 2px solid #afafaf;
+}
+button {
+  display: none;
+}
+/* reponsive */
+
+@media screen and (max-width: 375px) {
+  .container {
+    flex-direction: column;
+  }
+  .main-ui {
+    height: 812px;
+    display: table;
+    position: relative;
+  }
+  .main-ui .search {
+    margin: 30px 0;
+    max-width: 150px;
+  }
+  .main-ui .content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .more-ui {
+    display: table;
+    position: relative;
+  }
+  .more-ui .top .row {
+    display: none;
+    text-align: center;
+    margin: 0;
+    color: white;
+  }
+  .top {
+    position: relative;
+    display: block;
+  }
+  .top .row img {
+    width: 0;
+  }
+  .prev,
+  .next {
+    display: inline;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border: 0;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .bottom .item {
+    display: block;
+  }
 }
