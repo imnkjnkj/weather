@@ -147,6 +147,7 @@ button {
 @media screen and (max-width: 375px) {
   .container {
     flex-direction: column;
+    height: 100%;
   }
   .main-ui {
     height: 812px;
@@ -195,11 +196,15 @@ button {
     user-select: none;
     border: 0;
   }
+  .prev {
+    left: 0;
+  }
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
   .bottom .item {
     display: block;
+    margin: 0;
   }
 }

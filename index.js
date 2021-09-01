@@ -17,7 +17,7 @@ function setQuery(evt){
 
 function getResult(query){
 
-    fetch(`${api.base}forecast?q=${query}&appid=${api.key}`)
+    fetch(`${api.base}forecast?q=${query}&appid=${api.key}&lang=vi`)
     .then(weather =>{
         return weather.json();
 }).then(displayResults);
@@ -57,7 +57,7 @@ function displayResults(data){
 const callApi = () => {
     return axios({
         method: 'GET',
-        url: 'https://api.openweathermap.org/data/2.5/forecast?q=ho chi minh&appid=3cce8d5187814f08df34ec5b402c11d5',
+        url: 'https://api.openweathermap.org/data/2.5/forecast?q=ho chi minh&appid=3cce8d5187814f08df34ec5b402c11d5&lang=vi',
 
     })
         .then((res) => {
@@ -100,14 +100,18 @@ callApi();
 
 
 var slideIndex = 1;
+showSlides(slideIndex);
+
 // Next/previous controls
 function plusDivs(n) {
   showSlides(slideIndex += n);
 }
+
 // Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
+
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("slide");
@@ -116,5 +120,6 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
+
   slides[slideIndex-1].style.display = "block";
-};
+}
