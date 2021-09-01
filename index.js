@@ -108,7 +108,7 @@ function plusDivs(n) {
 
 // Thumbnail image controls
 
-if ($(window).width() < 375) {
+if (screen.width <= 375) {
     showSlides(slideIndex);
 
 
